@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Iara Pineda | Portafolio Personal & Profesional</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:
+    radial-gradient(circle at top,
+    #2e1065 0%,
+    #170a2e 40%,
+    #090414 100%);
+    color:#ffffff;
+    padding-top:70px;
+}
+
+/* NAVBAR SUPERIOR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(9, 4, 20, 0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid #3b1d6e;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    z-index:1000;
+}
+
+.nav-brand{
+    color:#e879f9;
+    font-weight:bold;
+    font-size:1.2rem;
+    letter-spacing:0.5px;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#e2e8f0;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#f0abfc;
+}
+
+/* HERO */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:40px;
+}
+
+.hero h1{
+    font-size:3.8rem;
+    background:linear-gradient(90deg, #f0abfc, #c084fc, #818cf8);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    margin-bottom:15px;
+}
+
+.author-tag{
+    display:inline-block;
+    padding:10px 24px;
+    border:1px solid #d946ef;
+    border-radius:40px;
+    color:#f5d0fe;
+    background:rgba(217, 70, 239, 0.1);
+    margin-bottom:25px;
+    font-weight:600;
+}
+
+.hero p{
+    max-width:850px;
+    font-size:1.15rem;
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+.btn{
+    margin-top:40px;
+    padding:14px 32px;
+    background:linear-gradient(135deg, #c026d3, #7c3aed);
+    color:white;
+    text-decoration:none;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
+    box-shadow:0 4px 15px rgba(192, 38, 211, 0.3);
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 6px 20px rgba(192, 38, 211, 0.5);
+}
+
+/* SECCIONES */
+
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.4rem;
+    color:#e879f9;
+    margin-bottom:50px;
+}
+
+.about{
+    max-width:1000px;
+    margin:auto;
+    color:#cbd5e1;
+    font-size:1.1rem;
+    line-height:1.8;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:30px;
+    margin-top:30px;
+}
+
+.about-card{
+    background:#190c33;
+    border:1px solid #3b1d6e;
+    padding:28px;
+    border-radius:14px;
+}
+
+.about-card h3{
+    color:#f0abfc;
+    margin-bottom:10px;
+    font-size:1.25rem;
+}
+
+/* TARJETAS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:25px;
+}
+
+.card{
+    background:#190c33;
+    border:1px solid #3b1d6e;
+    border-radius:15px;
+    padding:30px;
+    transition:.3s;
+}
+
+.card:hover{
+    border-color:#e879f9;
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#f0abfc;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#cbd5e1;
+    line-height:1.6;
+}
+
+/* PERFIL / AUTORA */
+
+.author-box{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    padding:45px;
+    background:#190c33;
+    border:1px solid #d946ef;
+    border-radius:18px;
+}
+
+.profile-img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #e879f9;
+    margin-bottom:20px;
+    box-shadow:0 0 20px rgba(232, 121, 249, 0.35);
+}
+
+.author-box h3{
+    font-size:2rem;
+    color:#f0abfc;
+    margin-bottom:15px;
+}
+
+.author-box p{
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+.brand{
+    margin-top:20px;
+    color:#e879f9;
+    font-weight:bold;
+    font-size:1.05rem;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:80px;
+    padding:40px;
+    text-align:center;
+    background:#06020d;
+    border-top:1px solid #261247;
+    color:#94a3b8;
+    line-height:1.6;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-brand">Iara Pineda</div>
+    <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#about">Enfoque</a></li>
+        <li><a href="#habilidades">Competencias</a></li>
+        <li><a href="#judo">Perfil en el Judo</a></li>
+        <li><a href="#autora">Perfil</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<header id="inicio" class="hero">
+
+<h1>Ingeniería, Tecnología & Disciplina</h1>
+
+<div class="author-tag">
+Iara Pineda • Desarrolladora Web & Atleta de Alto Rendimiento (Judo)
+</div>
+
+<p>
+Combinando el rigor analítico del desarrollo de software y la estructuración de sistemas con la estrategia, 
+la resiliencia y el dominio táctico propios de la práctica competitiva del judo.
+</p>
+
+<a href="#about" class="btn">
+Explorar Perfil
+</a>
+
+</header>
+
+<!-- SOBRE EL PROYECTO / ENFOQUE -->
+<section id="about">
+
+<h2 class="section-title">
+Filosofía Profesional
+</h2>
+
+<div class="about">
+    <p style="text-align: center; margin-bottom: 30px;">
+        La ejecución de un proyecto técnico requiere de la misma precisión, lectura del entorno y control de variables que una disciplina de combate: anticiparse al error, mantener la calma bajo presión y optimizar cada movimiento.
+    </p>
+
+    <div class="about-grid">
+        <div class="about-card">
+            <h3>Pensamiento Estratégico</h3>
+            <p>Capacidad para analizar problemas complejos desde la raíz, diseñando soluciones modulares, limpias y altamente eficientes.</p>
+        </div>
+        <div class="about-card">
+            <h3>Adaptabilidad y Control</h3>
+            <p>Respuesta rápida ante escenarios imprevistos, manteniendo la constancia y el enfoque orientado a metas concretas.</p>
+        </div>
+    </div>
+</div>
+
+</section>
+
+<!-- HABILIDADES TÉCNICAS -->
+<section id="habilidades">
+
+<h2 class="section-title">
+Competencias Técnicas
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>HTML5 Semántico</h3>
+<p>Estructuración limpia de contenidos web con altos estándares de accesibilidad, optimización y jerarquía lógica.</p>
+</div>
+
+<div class="card">
+<h3>CSS3 & Diseño Adaptativo</h3>
+<p>Creación de interfaces fluidas, modernas y responsivas mediante Flexbox, CSS Grid y efectos visuales personalizados.</p>
+</div>
+
+<div class="card">
+<h3>Análisis de Sistemas</h3>
+<p>Modelado de requerimientos, diseño lógico de arquitecturas y optimización de flujos operativos.</p>
+</div>
+
+<div class="card">
+<h3>Gestión y Despliegue</h3>
+<p>Organización de repositorios, control de cambios y publicación autónoma de aplicaciones estáticas funcionales.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PERFIL DE JUDO EXPANDIDO -->
+<section id="judo">
+
+<h2 class="section-title">
+Trayectoria & Aptitudes en el Judo
+</h2>
+
+<div class="about" style="margin-bottom: 40px; text-align: center;">
+    <p>
+        Más allá del desarrollo tecnológico, la práctica rigurosa del judo ha moldeado competencias profesionales clave transferibles a cualquier entorno laboral de alta exigencia:
+    </p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>Lectura Táctica y Anticipación</h3>
+<p>Al igual que en el tatami al estudiar los movimientos del oponente, en el software analizo las fallas de código y anticipo cuellos de botella antes de que afecten el sistema.</p>
+</div>
+
+<div class="card">
+<h3>Resiliencia ante la Presión</h3>
+<p>Capacidad probada para mantener la concentración y la cabeza fría en situaciones críticas, resolviendo incidencias complejas con eficacia.</p>
+</div>
+
+<div class="card">
+<h3>Optimización de la Fuerza (Seiryoku Zenyo)</h3>
+<p>Aplicación del principio fundamental del judo: el máximo rendimiento con el mínimo esfuerzo innecesario, traducido en código limpio y recursos optimizados.</p>
+</div>
+
+<div class="card">
+<h3>Constancia y Disciplina</h3>
+<p>Entrenamiento continuo orientado a la superación de metas, perfeccionando la técnica tanto en el ámbito deportivo como en el desarrollo de software.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- AUTORA -->
+<section id="autora">
+
+<h2 class="section-title">
+Sobre Mí
+</h2>
+
+<div class="author-box">
+
+<!-- Recuerda colocar su foto como perfil.jpg en la misma carpeta -->
+<img src="perfil.jpg" alt="Iara Pineda" class="profile-img">
+
+<h3>Iara Pineda</h3>
+
+<p>
+Estudiante de Ingeniería en Sistemas y competidora de judo. Fusiono la lógica de la programación con la disciplina y estrategia del deporte, 
+aportando una perspectiva analítica, organizada y resiliente a cada proyecto tecnológico que emprendo.
+</p>
+
+<div class="brand">
+Ingeniería de Sistemas • Desarrollo Web • Judo Competitivo
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+Portafolio Profesional © 2026 • Todos los derechos reservados.
+</p>
+
+<p>
+Diseñado y desarrollado por Iara Pineda.
+</p>
+
+</footer>
+
+</body>
+
+</html>
